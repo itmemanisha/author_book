@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\PublishController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ Route::prefix('publishers')->group(function () {
     Route::delete('{id}', [PublishController::class, 'destroy'])->name('publishers.destroy');
     Route::get('{id}', [PublishController::class, 'show'])->name('publishers.show');
 });
+
+Route::post('/chat', [ChatbotController::class, 'handle']);
+Route::view('/chatbot', 'chatbot');

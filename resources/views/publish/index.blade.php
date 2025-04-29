@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <h1>publishers</h1>
+        <h1>Publishers</h1>
         <div class="d-flex justify-content-end">
             <a href="{{ route('publishers.create') }}" class="btn btn-primary">Add Publish</a>
         </div>
